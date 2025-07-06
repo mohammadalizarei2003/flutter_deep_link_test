@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>در حال باز کردن اپ...</title>
+  <h1>در حال باز کردن اپ...</h1>
+  <script>
+    const url = new URL(window.location.href);
+    const id = url.pathname.split('/').pop() || '123';
+    const deepLink = `addwinlink://openBillboard/billboard/${id}`;
+    const fallbackUrl = `https://addwin.ir/billboards/${id}`;
+    const storeUrl = "https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME";
+
+    setTimeout(() => {
+      window.location.href = fallbackUrl;
+    }, 1500);
+
+    window.location.href = deepLink;
+  </script>
+</head>
+<body>
+  <p>در حال باز کردن اپلیکیشن Addwin...</p>
+</body>
+</html>
